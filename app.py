@@ -5,11 +5,13 @@ import cv2
 from tensorflow.keras.utils import img_to_array
 import os
 import pickle
+from keras.models import load_model
 
+model = load_model("face_exp.h5")
 # Load the pre-trained model
-model_pkl_file = "Face_classifier.pkl"
-with open(model_pkl_file, 'rb') as file:
-    model = pickle.load(file)
+#model_pkl_file = "Face_classifier.pkl"
+#with open(model_pkl_file, 'rb') as file:
+#    model = pickle.load(file)
 
 # Class labels
 class_labels = {
